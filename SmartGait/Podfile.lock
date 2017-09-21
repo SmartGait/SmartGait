@@ -1,0 +1,125 @@
+PODS:
+  - AsyncSwift (2.0.1)
+  - DateTools (2.0.0)
+  - Device (3.0.2)
+  - Differentiator (2.0.1)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Forgeries (1.0.0):
+    - Forgeries/Core (= 1.0.0)
+  - Forgeries/Core (1.0.0)
+  - JSKTimerView (0.4.1)
+  - LNRSimpleNotifications (0.6.1)
+  - NetworkActivityIndicator (0.1.6)
+  - Nimble (7.0.1)
+  - Nimble-Snapshots (6.2.1):
+    - Nimble-Snapshots/Core (= 6.2.1)
+  - Nimble-Snapshots/Core (6.2.1):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble (~> 7.0)
+  - NSObject+Rx (2.3.0):
+    - RxSwift (~> 3.0)
+  - ObjectMapper (2.2.8)
+  - Quick (1.1.0)
+  - Result (3.2.3)
+  - RxBlocking (3.6.1):
+    - RxSwift (~> 3.6)
+  - RxCocoa (3.6.1):
+    - RxSwift (~> 3.6)
+  - RxCoreData (0.3.1):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxCoreMotion (1.2.1):
+    - RxSwift
+  - RxDataSources (2.0.1):
+    - Differentiator (~> 2.0)
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.6.1)
+  - RxSwiftExt (2.5.1):
+    - RxSwiftExt/Core (= 2.5.1)
+  - RxSwiftExt/Core (2.5.1):
+    - RxSwift (~> 3.4)
+  - SnapKit (3.2.0)
+  - SwiftGen (5.1.1)
+  - SwiftLint (0.21.0)
+  - SwiftyBeaver (1.4.0)
+  - Watchdog (3.0)
+
+DEPENDENCIES:
+  - AsyncSwift
+  - DateTools
+  - Device
+  - FBSnapshotTestCase
+  - Forgeries
+  - JSKTimerView
+  - LNRSimpleNotifications
+  - NetworkActivityIndicator
+  - Nimble
+  - Nimble-Snapshots
+  - NSObject+Rx
+  - ObjectMapper
+  - Quick
+  - Result
+  - RxBlocking
+  - RxCocoa
+  - RxCoreData (from `https://github.com/franciscocgoncalves/RxCoreData-Private.git`)
+  - RxCoreMotion (from `https://github.com/RxSwiftCommunity/RxCoreMotion.git`)
+  - RxDataSources
+  - RxSwift
+  - RxSwiftExt
+  - SnapKit
+  - SwiftGen
+  - SwiftLint
+  - SwiftyBeaver
+  - Watchdog
+
+EXTERNAL SOURCES:
+  RxCoreData:
+    :git: https://github.com/franciscocgoncalves/RxCoreData-Private.git
+  RxCoreMotion:
+    :git: https://github.com/RxSwiftCommunity/RxCoreMotion.git
+
+CHECKOUT OPTIONS:
+  RxCoreData:
+    :commit: 1e13007cda465c6ecaca89d868316269f7950a90
+    :git: https://github.com/franciscocgoncalves/RxCoreData-Private.git
+  RxCoreMotion:
+    :commit: 62444e7804b7d76e635746bb5e4bc72ac31864cc
+    :git: https://github.com/RxSwiftCommunity/RxCoreMotion.git
+
+SPEC CHECKSUMS:
+  AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
+  DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
+  Device: 746d3457c67e6d7227c8c7945978314d06900437
+  Differentiator: 8555f40f5df08beb9bcf225724af295b90e738cb
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Forgeries: 64ced144ea8341d89a7eec9d1d7986f0f1366250
+  JSKTimerView: 6e773cc20f87e3af98b9fe242492f38055f55cc8
+  LNRSimpleNotifications: 4602ddc63444b42b1653681730678af1585c5fa3
+  NetworkActivityIndicator: 307fe641e00e13651110f739d2a6c54c54108f8c
+  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
+  Nimble-Snapshots: 31c8ef7fcebf0e68b4dff83f6e2160813a4a116b
+  NSObject+Rx: 38170f84b948152c05c57260cb853e387a5519d1
+  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  RxBlocking: 4f4bd5732e8b952e54ae8a57739bcfb645de12bc
+  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
+  RxCoreData: 02ec48ad9fce7460ff3f09e60dfe14434bdff5c2
+  RxCoreMotion: 05aae481dd41cbc4097d24567da9807fb639f004
+  RxDataSources: 93c805010d4f5970e5204829a182bcdceab5adb5
+  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  RxSwiftExt: ec25c6df68d15ad6fe326792d60452b52e83d606
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwiftGen: daba48311d62361eb204a55e579c3c88dd99327e
+  SwiftLint: 6de8b2d15f43c482bdec2953b8cfd696faa876e8
+  SwiftyBeaver: 78d9186ce7595b4400ce01e5fd750d263e72dd7b
+  Watchdog: 141185b6b3a332a9f5721ea42dfa9681cf2d7c6b
+
+PODFILE CHECKSUM: eb22471d7776bb84b09164c62637def7dee28f65
+
+COCOAPODS: 1.3.0.beta.2

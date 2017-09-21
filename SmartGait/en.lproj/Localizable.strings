@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  SmartGait
+
+  Created by Francisco Gonçalves on 11/07/2017.
+  Copyright © 2017 Francisco Gonçalves. All rights reserved.
+*/
+
+"Research" = "Research";
+"SmartAssistant" = "Smart Assistant";
+"Steps" = "Steps";
+"RestTime" = "Rest Time";
+"Start" = "Start";
+"WalkingOutbound" = "Walk %d steps";
+"WalkingReturn" = "Turn around and walk %d steps";
+"Rest" = "Stand still for %d seconds";
+"Waiting" = "Waiting";
+"WillStart" = "Will Start";
+"StartingIn" = "Starting in %d s";
+"Completed" = "Completed";
+"Saving" = "Saving";
+"EndedSaving" = "Ended Saving";
+"WillSaveTitle" = "Will Save";
+"WillSaveBody" = "Task: %d";
+"SuccessTitle" = "Success";
+"SuccessBody" = "Task: %d";
+"ErrorTitle" = "Error";
+"ErrorBody" = "Error saving task: %d";

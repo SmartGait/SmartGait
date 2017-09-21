@@ -1,0 +1,102 @@
+project 'SmartGait.xcodeproj'
+
+# Uncomment the next line to define a global platform for your project
+
+def rx_pods
+  pod 'RxSwift' # Reactive programming
+  pod 'RxCocoa' # Reactive extensions for Cocoa
+  pod 'NSObject+Rx'
+  pod 'RxSwiftExt'
+  pod 'RxCoreMotion', :git => 'https://github.com/RxSwiftCommunity/RxCoreMotion.git'
+end
+
+def common_pods
+  # Reactive
+  rx_pods
+
+  pod 'Result'
+
+  # JSON
+  pod 'ObjectMapper'
+
+  # Tools
+  pod 'SwiftLint'
+  pod 'SwiftyBeaver'
+end
+
+def ios_pods
+  common_pods
+
+  pod 'RxCoreData', :git => 'https://github.com/franciscocgoncalves/RxCoreData-Private.git'
+  pod 'RxDataSources'
+
+  pod 'LNRSimpleNotifications'
+
+  # Research
+  #pod 'ResearchKit', :git => 'https://github.com/ResearchKit/ResearchKit.git'
+
+  # UI
+  pod 'JSKTimerView'
+
+  # Helpers
+  pod 'DateTools' # Helper to handle with date objects
+  pod 'AsyncSwift' # Helper to handle threading
+  pod 'Watchdog' # Automatic UI thread blocking finder
+  pod 'SnapKit' # Autolayout DSL
+  pod 'Device' # Device properties
+
+  # Tools
+  pod 'SwiftGen'
+end
+
+def watchos_pods
+  common_pods
+  pod 'NetworkActivityIndicator'
+end
+
+def test_pods
+  # Testing
+  pod 'Quick' # RSpec type of testing https://github.com/Quick/Quick
+  pod 'Nimble' # Better assertion https://github.com/Quick/Nimble
+  pod 'FBSnapshotTestCase'
+  pod 'Nimble-Snapshots'
+  pod 'Forgeries'
+  pod 'RxBlocking'
+end
+
+target 'SmartGait' do
+  #platform :ios, '11.0'
+
+  use_frameworks!
+  ios_pods
+
+  target 'SmartGaitTests' do
+    inherit! :search_paths
+    test_pods
+    # Pods for testing
+  end
+
+  target 'SmartGaitUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
+
+target 'SmartGait-WatchOS' do
+
+end
+
+target 'SmartGait-WatchOS Extension' do
+  #platform :watchos, '4.0'
+
+  use_frameworks!
+  watchos_pods
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end

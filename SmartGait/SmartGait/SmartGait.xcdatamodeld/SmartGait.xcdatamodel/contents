@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13154.26" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccelerometerModel" representedClassName=".AccelerometerModel" syncable="YES">
+        <attribute name="timestamp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="z" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="acceloremeterResult" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="AccelerometerResultModel" inverseName="accelerometer" inverseEntity="AccelerometerResultModel" syncable="YES"/>
+    </entity>
+    <entity name="AccelerometerResultModel" representedClassName=".AccelerometerResultModel" parentEntity="ResultModel" syncable="YES">
+        <relationship name="accelerometer" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AccelerometerModel" inverseName="acceloremeterResult" inverseEntity="AccelerometerModel" syncable="YES"/>
+        <relationship name="step" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="StepModel" inverseName="accelerometerResult" inverseEntity="StepModel" syncable="YES"/>
+    </entity>
+    <entity name="ClassificationDataModel" representedClassName=".ClassificationDataModel" isAbstract="YES" syncable="YES">
+        <attribute name="currentActivity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dataClassification" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finalTimestamp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="initialTimestamp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="samplesUsed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ClassificationTaskModel" representedClassName=".ClassificationTaskModel" isAbstract="YES" syncable="YES">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="DeviceMotionModel" representedClassName=".DeviceMotionModel" syncable="YES">
+        <attribute name="attitudeW" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attitudeX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attitudeY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attitudeZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gravityX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gravityY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gravityZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="magneticFieldAccuracy" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="magneticFieldX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="magneticFieldY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="magneticFieldZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rotationRateX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rotationRateY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rotationRateZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userAccelerationX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userAccelerationY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userAccelerationZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="deviceMotionResult" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DeviceMotionResultModel" inverseName="deviceMotion" inverseEntity="DeviceMotionResultModel" syncable="YES"/>
+        <relationship name="rawDataModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RawDataModel" inverseName="motionData" inverseEntity="RawDataModel" syncable="YES"/>
+    </entity>
+    <entity name="DeviceMotionResultModel" representedClassName=".DeviceMotionResultModel" parentEntity="ResultModel" syncable="YES">
+        <relationship name="deviceMotion" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DeviceMotionModel" inverseName="deviceMotionResult" inverseEntity="DeviceMotionModel" syncable="YES"/>
+        <relationship name="step" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="StepModel" inverseName="deviceMotionResult" inverseEntity="StepModel" syncable="YES"/>
+    </entity>
+    <entity name="MeasurementModel" representedClassName=".MeasurementModel" syncable="YES">
+        <attribute name="accelerationX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="accelerationY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="accelerationZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attitudePitch" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attitudeRoll" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attitudeYaw" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dmRotationRateX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dmRotationRateY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dmRotationRateZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gravityX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gravityY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gravityZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rotationRateX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rotationRateY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rotationRateZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="userAccelerationX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userAccelerationY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userAccelerationZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MergedDataModel" representedClassName=".MergedDataModel" isAbstract="YES" syncable="YES">
+        <attribute name="currentActivity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dataClassification" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ProcessedClassificationTaskModel" representedClassName=".ProcessedClassificationTaskModel" parentEntity="ClassificationTaskModel" syncable="YES">
+        <relationship name="mergedProcessedData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ProcessedMergedDataModel" inverseName="processedClassificationTask" inverseEntity="ProcessedMergedDataModel" syncable="YES"/>
+    </entity>
+    <entity name="ProcessedDataModel" representedClassName=".ProcessedDataModel" parentEntity="ClassificationDataModel" syncable="YES">
+        <attribute name="averageGravityX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="averageGravityY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="averageGravityZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="diffAverageGravityX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="diffAverageGravityY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="diffAverageGravityZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="diffMaxMinX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="diffMaxMinY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="diffMaxMinZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rmsX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rmsY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rmsZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="standardDeviationX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="standardDeviationY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="standardDeviationZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sumOfDifferencesX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sumOfDifferencesY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sumOfDifferencesZ" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sumOfMagnitudeDiffs" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="iOSProcessedMergedData" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ProcessedMergedDataModel" inverseName="iOSProcessedData" inverseEntity="ProcessedMergedDataModel" syncable="YES"/>
+        <relationship name="watchOSProcessedMergedData" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ProcessedMergedDataModel" inverseName="watchOSProcessedData" inverseEntity="ProcessedMergedDataModel" syncable="YES"/>
+    </entity>
+    <entity name="ProcessedMergedDataModel" representedClassName=".ProcessedMergedDataModel" parentEntity="MergedDataModel" syncable="YES">
+        <relationship name="iOSProcessedData" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ProcessedDataModel" inverseName="iOSProcessedMergedData" inverseEntity="ProcessedDataModel" syncable="YES"/>
+        <relationship name="processedClassificationTask" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ProcessedClassificationTaskModel" inverseName="mergedProcessedData" inverseEntity="ProcessedClassificationTaskModel" syncable="YES"/>
+        <relationship name="watchOSProcessedData" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ProcessedDataModel" inverseName="watchOSProcessedMergedData" inverseEntity="ProcessedDataModel" syncable="YES"/>
+    </entity>
+    <entity name="RawClassificationTaskModel" representedClassName=".RawClassificationTaskModel" parentEntity="ClassificationTaskModel" syncable="YES">
+        <relationship name="mergedRawData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RawMergedDataModel" inverseName="rawClassificationTask" inverseEntity="RawMergedDataModel" syncable="YES"/>
+    </entity>
+    <entity name="RawDataModel" representedClassName=".RawDataModel" parentEntity="ClassificationDataModel" syncable="YES">
+        <relationship name="iOSRawMergedData" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RawMergedDataModel" inverseName="iOSRawData" inverseEntity="RawMergedDataModel" syncable="YES"/>
+        <relationship name="motionData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DeviceMotionModel" inverseName="rawDataModel" inverseEntity="DeviceMotionModel" syncable="YES"/>
+        <relationship name="watchOSRawMergedData" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RawMergedDataModel" inverseName="watchOSRawData" inverseEntity="RawMergedDataModel" syncable="YES"/>
+    </entity>
+    <entity name="RawMergedDataModel" representedClassName="RawMergedDataModel" parentEntity="MergedDataModel" syncable="YES" codeGenerationType="class">
+        <relationship name="iOSRawData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RawDataModel" inverseName="iOSRawMergedData" inverseEntity="RawDataModel" syncable="YES"/>
+        <relationship name="rawClassificationTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RawClassificationTaskModel" inverseName="mergedRawData" inverseEntity="RawClassificationTaskModel" syncable="YES"/>
+        <relationship name="watchOSRawData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RawDataModel" inverseName="watchOSRawMergedData" inverseEntity="RawDataModel" syncable="YES"/>
+    </entity>
+    <entity name="ResultModel" representedClassName=".ResultModel" isAbstract="YES" syncable="YES">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fileURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="StepModel" representedClassName=".StepModel" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="accelerometerResult" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="AccelerometerResultModel" inverseName="step" inverseEntity="AccelerometerResultModel" syncable="YES"/>
+        <relationship name="deviceMotionResult" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DeviceMotionResultModel" inverseName="step" inverseEntity="DeviceMotionResultModel" syncable="YES"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TaskModel" inverseName="steps" inverseEntity="TaskModel" syncable="YES"/>
+    </entity>
+    <entity name="TaskModel" representedClassName=".TaskModel" syncable="YES">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="steps" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StepModel" inverseName="task" inverseEntity="StepModel" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AccelerometerModel" positionX="288" positionY="330" width="128" height="120"/>
+        <element name="AccelerometerResultModel" positionX="70" positionY="306" width="128" height="75"/>
+        <element name="ClassificationDataModel" positionX="-414" positionY="225" width="128" height="135"/>
+        <element name="ClassificationTaskModel" positionX="-261" positionY="783" width="126" height="105"/>
+        <element name="DeviceMotionModel" positionX="79" positionY="522" width="128" height="345"/>
+        <element name="DeviceMotionResultModel" positionX="-108" positionY="305" width="128" height="75"/>
+        <element name="MeasurementModel" positionX="-666" positionY="378" width="128" height="330"/>
+        <element name="MergedDataModel" positionX="-461" positionY="783" width="137" height="90"/>
+        <element name="ProcessedClassificationTaskModel" positionX="-459" positionY="180" width="128" height="60"/>
+        <element name="ProcessedDataModel" positionX="-459" positionY="180" width="128" height="450"/>
+        <element name="ProcessedMergedDataModel" positionX="-450" positionY="189" width="128" height="90"/>
+        <element name="RawClassificationTaskModel" positionX="-441" positionY="198" width="128" height="60"/>
+        <element name="RawDataModel" positionX="-423" positionY="216" width="128" height="90"/>
+        <element name="ResultModel" positionX="-11" positionY="27" width="128" height="105"/>
+        <element name="StepModel" positionX="-216" positionY="504" width="128" height="105"/>
+        <element name="TaskModel" positionX="-423" positionY="36" width="128" height="120"/>
+        <element name="RawMergedDataModel" positionX="-459" positionY="180" width="128" height="90"/>
+    </elements>
+</model>

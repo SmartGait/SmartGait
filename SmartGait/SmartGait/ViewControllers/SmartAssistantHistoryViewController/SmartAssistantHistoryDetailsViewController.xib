@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmartAssistantHistoryDetailsViewController" customModule="SmartGait" customModuleProvider="target">
+            <connections>
+                <outlet property="sendButton" destination="shL-k5-q8l" id="GqY-P7-KB4"/>
+                <outlet property="titleLabel" destination="qAk-NZ-5bS" id="4LY-SO-8zo"/>
+                <outlet property="titleTextField" destination="aNo-2G-xbH" id="KGs-Hf-k2c"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ko0-el-XQN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAk-NZ-5bS">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="25.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNo-2G-xbH">
+                            <rect key="frame" x="0.0" y="35.5" width="375" height="591.5"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shL-k5-q8l">
+                            <rect key="frame" x="0.0" y="637" width="36" height="30"/>
+                            <state key="normal" title="Send"/>
+                            <connections>
+                                <action selector="send:" destination="-1" eventType="touchUpInside" id="apf-W0-ZKp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="aNo-2G-xbH" secondAttribute="trailing" id="arL-WK-UnL"/>
+                        <constraint firstItem="aNo-2G-xbH" firstAttribute="leading" secondItem="Ko0-el-XQN" secondAttribute="leading" id="oIq-ZT-D5D"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ko0-el-XQN" secondAttribute="trailing" id="dMR-iQ-Djw"/>
+                <constraint firstAttribute="bottom" secondItem="Ko0-el-XQN" secondAttribute="bottom" id="k80-Tf-NNN"/>
+                <constraint firstItem="Ko0-el-XQN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ldb-hu-iMA"/>
+                <constraint firstItem="Ko0-el-XQN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="n4Y-mG-Zds"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

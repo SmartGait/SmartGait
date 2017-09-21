@@ -1,0 +1,78 @@
+
+/* Class = "WKInterfaceMenuItem"; title = "Start Workout"; ObjectID = "079-mT-oSV"; */
+"079-mT-oSV.title" = "Iniciar Exercício";
+
+/* Class = "WKInterfaceMenuItem"; title = "Start Workout"; ObjectID = "0CV-rL-WY0"; */
+"0CV-rL-WY0.title" = "Iniciar Exercício";
+
+/* Class = "WKInterfaceButton"; title = "Watch Only"; ObjectID = "0c2-N6-XkQ"; */
+"0c2-N6-XkQ.title" = "Relógio Apenas";
+
+/* Class = "WKInterfaceLabel"; text = "Rest Time"; ObjectID = "1E7-H9-pg6"; */
+"1E7-H9-pg6.text" = "Estático";
+
+/* Class = "WKInterfaceLabel"; text = "Waiting for SmartGait to be opened on the iPhone."; ObjectID = "4qk-hw-cHA"; */
+"4qk-hw-cHA.text" = "À espera que a aplicação seja aberta no smartphone.";
+
+/* Class = "WKInterfaceMenuItem"; title = "Stop Workout"; ObjectID = "4t4-Zh-K3v"; */
+"4t4-Zh-K3v.title" = "Para exercício";
+
+/* Class = "WKInterfaceButton"; title = "Synced Raw"; ObjectID = "9RQ-1A-2fr"; */
+"9RQ-1A-2fr.title" = "Sincronizado NP";
+
+/* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "9Um-tl-Qzv"; */
+"9Um-tl-Qzv.title" = "Iniciar";
+
+/* Class = "WKInterfaceController"; title = "Smart Gait"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "Smart Gait";
+
+/* Class = "WKInterfaceMenuItem"; title = "Stop Workout"; ObjectID = "Eaj-ER-j4R"; */
+"Eaj-ER-j4R.title" = "Parar Exercício";
+
+/* Class = "WKInterfaceButton"; title = "Synced Processed"; ObjectID = "FeI-eU-BU2"; */
+"FeI-eU-BU2.title" = "P Sincronizado";
+
+/* Class = "WKInterfaceLabel"; text = "Smart Assistant"; ObjectID = "GRR-zm-HzK"; */
+"GRR-zm-HzK.text" = "Assistente Inteligente";
+
+/* Class = "WKInterfaceMenuItem"; title = "Start Workout"; ObjectID = "HG4-0M-YqC"; */
+"HG4-0M-YqC.title" = "Start Workout";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "IdU-wH-bcW"; */
+"IdU-wH-bcW.text" = "Alert Label";
+
+/* Class = "WKInterfaceLabel"; text = "Smart Assistant"; ObjectID = "JB7-WT-4SO"; */
+"JB7-WT-4SO.text" = "Iniciar Exercício";
+
+/* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "MKS-7N-HvA"; */
+"MKS-7N-HvA.title" = "Iniciar";
+
+/* Class = "WKInterfaceMenuItem"; title = "Stop Workout"; ObjectID = "SS5-Go-XQf"; */
+"SS5-Go-XQf.title" = "Parar Exercício";
+
+/* Class = "WKInterfaceMenuItem"; title = "Start Workout"; ObjectID = "UGk-6t-Iui"; */
+"UGk-6t-Iui.title" = "Iniciar Exercício";
+
+/* Class = "WKInterfaceButton"; title = "Smart Assistant"; ObjectID = "l25-E9-KZY"; */
+"l25-E9-KZY.title" = "Assistente Inteligente";
+
+/* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "o7c-DG-RK6"; */
+"o7c-DG-RK6.title" = "Iniciar";
+
+/* Class = "WKInterfaceButton"; title = "Research"; ObjectID = "oTg-LN-1un"; */
+"oTg-LN-1un.title" = "Estudo";
+
+/* Class = "WKInterfaceLabel"; text = "Starts in"; ObjectID = "pFh-Mh-1MM"; */
+"pFh-Mh-1MM.text" = "Começa em";
+
+/* Class = "WKInterfaceLabel"; text = "Smart Assistant"; ObjectID = "srE-zw-XqB"; */
+"srE-zw-XqB.text" = "Assistente Inteligente";
+
+/* Class = "WKInterfaceLabel"; text = "Steps"; ObjectID = "uCB-RE-jCh"; */
+"uCB-RE-jCh.text" = "Passos";
+
+/* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "udd-8t-ppa"; */
+"udd-8t-ppa.title" = "Começar";
+
+/* Class = "WKInterfaceMenuItem"; title = "Stop Workout"; ObjectID = "xR0-VU-cR5"; */
+"xR0-VU-cR5.title" = "Parar exercício";

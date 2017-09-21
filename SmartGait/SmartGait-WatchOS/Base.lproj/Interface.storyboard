@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13189.4" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u8m-Oz-AgT">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13049.2"/>
+    </dependencies>
+    <scenes>
+        <!--Menu Interface Controller-->
+        <scene sceneID="p2O-NS-x5U">
+            <objects>
+                <controller id="Lax-Ia-ddL" customClass="MenuInterfaceController" customModule="SmartGait_WatchOS_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Waiting for SmartGait to be opened on the iPhone." textAlignment="left" numberOfLines="0" id="4qk-hw-cHA"/>
+                        <button width="1" alignment="center" verticalAlignment="center" hidden="YES" title="Research" id="oTg-LN-1un">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="aAf-YW-eJo"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" hidden="YES" title="Smart Assistant" id="l25-E9-KZY">
+                            <connections>
+                                <segue destination="q7f-6s-nmE" kind="push" id="lLQ-VU-dQb"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="infoLabel" destination="4qk-hw-cHA" id="pRl-n4-1yN"/>
+                        <outlet property="researchButton" destination="oTg-LN-1un" id="59w-hd-pzb"/>
+                        <outlet property="smartAssistantButton" destination="l25-E9-KZY" id="sGH-uL-a9m"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-438" y="40"/>
+        </scene>
+        <!--Smart Gait-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Smart Gait" id="AgC-eL-Hgc" customClass="ResearchInterfaceController" customModule="SmartGait_WatchOS_Extension">
+                    <items>
+                        <group alignment="center" verticalAlignment="center" id="Byu-QZ-rzG">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="khP-bZ-JW2">
+                                    <items>
+                                        <label alignment="center" text="Steps" id="uCB-RE-jCh">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <picker width="63" height="100" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Yc2-OW-5b4">
+                                            <variation key="device=watch38mm" height="90"/>
+                                            <variation key="device=watch42mm" height="111"/>
+                                            <connections>
+                                                <action selector="stepPickerItemChanged:" destination="AgC-eL-Hgc" id="OzS-42-RSM"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="Lq8-Oj-ZKu">
+                                    <items>
+                                        <label alignment="center" text="Rest Time" id="1E7-H9-pg6">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <picker width="63" height="100" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="7fu-La-HxB">
+                                            <variation key="device=watch38mm" height="90"/>
+                                            <variation key="device=watch42mm" height="111"/>
+                                            <connections>
+                                                <action selector="restPickerItemChanged:" destination="AgC-eL-Hgc" id="hDR-Kw-56t"/>
+                                            </connections>
+                                        </picker>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Start" id="o7c-DG-RK6">
+                            <connections>
+                                <action selector="startButtonAction" destination="AgC-eL-Hgc" id="xIt-ci-Opj"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <menu key="menu" id="oem-MI-SPo">
+                        <items>
+                            <menuItem title="Start Workout" icon="play" id="0CV-rL-WY0">
+                                <connections>
+                                    <action selector="startWorkoutSession" destination="AgC-eL-Hgc" id="UWS-Ha-zVw"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop Workout" icon="pause" id="4t4-Zh-K3v">
+                                <connections>
+                                    <action selector="stopWorkoutSession" destination="AgC-eL-Hgc" id="oba-Tn-dLk"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="restTimePicker" destination="7fu-La-HxB" id="eiL-wR-5i3"/>
+                        <outlet property="startButton" destination="o7c-DG-RK6" id="bLm-FT-BdG"/>
+                        <outlet property="stepPicker" destination="Yc2-OW-5b4" id="lmi-hx-JCQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-173.4871794871795" y="39.666666666666671"/>
+        </scene>
+        <!--Synced Smart Assistant Interface Controller-->
+        <scene sceneID="4cf-IM-aMF">
+            <objects>
+                <controller id="QE8-5V-Bak" customClass="SyncedSmartAssistantInterfaceController" customModule="SmartGait_WatchOS_Extension">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Start" id="MKS-7N-HvA">
+                            <connections>
+                                <action selector="startButtonAction" destination="QE8-5V-Bak" id="9W9-pd-P0l"/>
+                            </connections>
+                        </button>
+                        <label height="20" alignment="center" verticalAlignment="center" text="Smart Assistant" id="srE-zw-XqB"/>
+                        <timer alignment="center" verticalAlignment="center" previewedSeconds="5" id="HEs-x9-290">
+                            <calendarUnit key="units" second="YES"/>
+                        </timer>
+                    </items>
+                    <menu key="menu" id="lHh-fL-qOQ">
+                        <items>
+                            <menuItem title="Start Workout" icon="play" id="HG4-0M-YqC">
+                                <connections>
+                                    <action selector="startWorkoutSessionAction" destination="QE8-5V-Bak" id="5Bd-Tf-V8C"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop Workout" icon="pause" id="Eaj-ER-j4R">
+                                <connections>
+                                    <action selector="stopWorkoutSessionAction" destination="QE8-5V-Bak" id="JPW-MY-ffm"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="infoLabel" destination="srE-zw-XqB" id="94s-9f-J0q"/>
+                        <outlet property="startButton" destination="MKS-7N-HvA" id="LQ2-Zp-P30"/>
+                        <outlet property="timer" destination="HEs-x9-290" id="BDx-pI-eA3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-564" y="750"/>
+        </scene>
+        <!--Raw Synced Smart Assistant Interface Controller-->
+        <scene sceneID="EAf-aH-mN9">
+            <objects>
+                <controller id="u8m-Oz-AgT" customClass="RawSyncedSmartAssistantInterfaceController" customModule="SmartGait_WatchOS_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Smart Assistant" numberOfLines="0" id="GRR-zm-HzK">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <timer alignment="center" verticalAlignment="center" hidden="YES" previewedSeconds="5" id="xWu-TO-uLU">
+                            <calendarUnit key="units" second="YES"/>
+                        </timer>
+                        <slider width="1" alignment="center" verticalAlignment="center" value="0.5" steps="10" id="7IU-br-Zoi">
+                            <connections>
+                                <action selector="sliderAction:" destination="u8m-Oz-AgT" id="c20-kz-Mwb"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Start" id="udd-8t-ppa">
+                            <connections>
+                                <action selector="startButtonAction" destination="u8m-Oz-AgT" id="Suy-Hb-IMK"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <menu key="menu" id="KVL-xi-I4n">
+                        <items>
+                            <menuItem title="Start Workout" icon="play" id="UGk-6t-Iui">
+                                <connections>
+                                    <action selector="startWorkoutSessionAction" destination="u8m-Oz-AgT" id="ucN-ia-08w"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop Workout" icon="pause" id="xR0-VU-cR5">
+                                <connections>
+                                    <action selector="stopWorkoutSessionAction" destination="u8m-Oz-AgT" id="5wv-ri-E1B"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="infoLabel" destination="GRR-zm-HzK" id="eaL-xM-U2P"/>
+                        <outlet property="sensitivitySlider" destination="7IU-br-Zoi" id="o57-Zj-eot"/>
+                        <outlet property="startButton" destination="udd-8t-ppa" id="W4f-eO-WpG"/>
+                        <outlet property="timer" destination="xWu-TO-uLU" id="9D7-bM-V9r"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-259" y="750"/>
+        </scene>
+        <!--ShortWalkInterfaceController-->
+        <scene sceneID="BcE-h3-0Nw">
+            <objects>
+                <controller identifier="ShortWalkInterfaceController" id="5IU-Al-udg" customClass="ShortWalkInterfaceController" customModule="SmartGait_WatchOS_Extension">
+                    <items>
+                        <imageView height="102" alignment="left" hidden="YES" id="TRF-Op-rfI"/>
+                        <label alignment="center" verticalAlignment="center" text="Starts in" textAlignment="center" numberOfLines="0" id="pFh-Mh-1MM"/>
+                        <timer alignment="center" verticalAlignment="center" previewedSeconds="5" id="RXg-eH-85t">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                            <calendarUnit key="units" second="YES"/>
+                        </timer>
+                    </items>
+                    <connections>
+                        <outlet property="timer" destination="RXg-eH-85t" id="deB-It-FWc"/>
+                        <outlet property="titleLabel" destination="pFh-Mh-1MM" id="zhX-Ws-iNu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="74" y="40"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="SmartGait_WatchOS" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="A7M-oS-OZS">
+            <objects>
+                <controller id="q7f-6s-nmE">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Watch Only" id="0c2-N6-XkQ">
+                            <connections>
+                                <segue destination="O91-Mt-Ymb" kind="push" id="5zb-Je-2xv"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Synced Processed" id="FeI-eU-BU2">
+                            <connections>
+                                <segue destination="QE8-5V-Bak" kind="push" id="d8H-ab-xJz"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Synced Raw" id="9RQ-1A-2fr">
+                            <connections>
+                                <segue destination="u8m-Oz-AgT" kind="push" id="xdJ-yF-uWU"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="researchButton" destination="0c2-N6-XkQ" id="jLy-Yk-POs"/>
+                        <outlet property="smartAssistantButton" destination="FeI-eU-BU2" id="Vqa-Nv-Hgh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-438" y="399"/>
+        </scene>
+        <!--Watch Only Smart Assistant Interface Controller-->
+        <scene sceneID="vrh-uO-fpU">
+            <objects>
+                <controller id="O91-Mt-Ymb" customClass="WatchOnlySmartAssistantInterfaceController" customModule="SmartGait_WatchOS_Extension">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Start" id="9Um-tl-Qzv">
+                            <connections>
+                                <action selector="startButtonAction" destination="O91-Mt-Ymb" id="I1A-a7-Vju"/>
+                            </connections>
+                        </button>
+                        <label height="20" alignment="center" verticalAlignment="center" text="Smart Assistant" id="JB7-WT-4SO"/>
+                        <timer alignment="center" verticalAlignment="center" previewedSeconds="5" id="XXo-he-a7u">
+                            <calendarUnit key="units" second="YES"/>
+                        </timer>
+                    </items>
+                    <menu key="menu" id="MPK-YN-Pqu">
+                        <items>
+                            <menuItem title="Start Workout" icon="play" id="079-mT-oSV">
+                                <connections>
+                                    <action selector="startWorkoutSessionAction" destination="O91-Mt-Ymb" id="pVL-lP-0hk"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop Workout" icon="pause" id="SS5-Go-XQf">
+                                <connections>
+                                    <action selector="stopWorkoutSessionAction" destination="O91-Mt-Ymb" id="OFB-4R-MNb"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="infoLabel" destination="JB7-WT-4SO" id="mQS-Wf-NX9"/>
+                        <outlet property="startButton" destination="9Um-tl-Qzv" id="Dxa-KC-xkq"/>
+                        <outlet property="timer" destination="XXo-he-a7u" id="yEc-jI-ps2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-184" y="399"/>
+        </scene>
+    </scenes>
+</document>

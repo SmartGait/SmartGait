@@ -1,0 +1,117 @@
+
+/* Class = "UILabel"; text = "y:"; ObjectID = "383-Nr-hYC"; */
+"383-Nr-hYC.text" = "y:";
+
+/* Class = "UIButton"; normalTitle = "Research"; ObjectID = "3Oq-Qz-CLS"; */
+"3Oq-Qz-CLS.normalTitle" = "Estudo";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "3c4-Md-Mai"; */
+"3c4-Md-Mai.normalTitle" = "Reiniciar";
+
+/* Class = "UILabel"; text = "Classifier"; ObjectID = "4cg-dW-J6t"; */
+"4cg-dW-J6t.text" = "Classificador";
+
+/* Class = "UITabBarItem"; title = "Research History"; ObjectID = "5Ln-WW-CZ6"; */
+"5Ln-WW-CZ6.title" = "Historico de Estudos";
+
+/* Class = "UINavigationItem"; title = "Raw Synced Smart Assistant"; ObjectID = "5Vo-Ga-gHq"; */
+"5Vo-Ga-gHq.title" = "Assistente Inteligente Sincronizado e Não Processado";
+
+/* Class = "UILabel"; text = "iPhone Only Smart Assistant"; ObjectID = "Avh-Fv-awW"; */
+"Avh-Fv-awW.text" = "Assistente Inteligente apenas iPhone";
+
+/* Class = "UINavigationItem"; title = "Processed Synced Smart Assistant"; ObjectID = "BMd-hU-80F"; */
+"BMd-hU-80F.title" = "Assistente Inteligente Processado e Sincronizado";
+
+/* Class = "UITabBarItem"; title = "Raw SA"; ObjectID = "BgY-7r-Aav"; */
+"BgY-7r-Aav.title" = "Não Processado AI";
+
+/* Class = "UILabel"; text = "z:"; ObjectID = "BhW-dp-dqq"; */
+"BhW-dp-dqq.text" = "z:";
+
+/* Class = "UILabel"; text = "Classifier"; ObjectID = "FMX-Kd-khE"; */
+"FMX-Kd-khE.text" = "Classificador";
+
+/* Class = "UINavigationItem"; title = "Research History"; ObjectID = "JN6-hK-Sgx"; */
+"JN6-hK-Sgx.title" = "Historidco de EStudos";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "K5o-zb-Rs4"; */
+"K5o-zb-Rs4.text" = "Titlo";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "LbK-Og-Fnu"; */
+"LbK-Og-Fnu.normalTitle" = "Começar";
+
+/* Class = "UITabBarItem"; title = "SA R History"; ObjectID = "MF8-bC-DZZ"; */
+"MF8-bC-DZZ.title" = "Histórico NP AI";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Msl-dT-fgc"; */
+"Msl-dT-fgc.text" = "Titlo";
+
+/* Class = "UITabBarItem"; title = "Research"; ObjectID = "Oxt-DX-Udy"; */
+"Oxt-DX-Udy.title" = "Estudo";
+
+/* Class = "UITabBarItem"; title = "SA P History"; ObjectID = "P6U-cH-soV"; */
+"P6U-cH-soV.title" = "Histórico NP AI";
+
+/* Class = "UILabel"; text = "w:"; ObjectID = "Qbq-0r-3Pb"; */
+"Qbq-0r-3Pb.text" = "w:";
+
+/* Class = "UILabel"; text = "Measurement"; ObjectID = "Rdw-TF-bW3"; */
+"Rdw-TF-bW3.text" = "Medida";
+
+/* Class = "UITabBarItem"; title = "Processed SA"; ObjectID = "VPo-qZ-EKM"; */
+"VPo-qZ-EKM.title" = "AI Processado";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "aBf-KF-Nna"; */
+"aBf-KF-Nna.normalTitle" = "Coemçar";
+
+/* Class = "UILabel"; text = "w:"; ObjectID = "c58-yJ-5Fx"; */
+"c58-yJ-5Fx.text" = "w:";
+
+/* Class = "UILabel"; text = "Id - Title"; ObjectID = "eJd-nn-fzr"; */
+"eJd-nn-fzr.text" = "Id - Titlo";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "eYc-VJ-Gyk"; */
+"eYc-VJ-Gyk.normalTitle" = "Enviar";
+
+/* Class = "UILabel"; text = "x:"; ObjectID = "fQR-Ia-JCw"; */
+"fQR-Ia-JCw.text" = "x:";
+
+/* Class = "UILabel"; text = "Id - Title"; ObjectID = "meA-5K-r3D"; */
+"meA-5K-r3D.text" = "Id - Titlo";
+
+/* Class = "UILabel"; text = "Id - Title"; ObjectID = "nz6-vo-9J7"; */
+"nz6-vo-9J7.text" = "Id - Titlo";
+
+/* Class = "UILabel"; text = "Measurement"; ObjectID = "o3M-t0-elO"; */
+"o3M-t0-elO.text" = "Medida";
+
+/* Class = "UITabBarItem"; title = "iPhone Assistant"; ObjectID = "ocm-Xr-2mu"; */
+"ocm-Xr-2mu.title" = "Assistente iPhone";
+
+/* Class = "UILabel"; text = "x:"; ObjectID = "p2F-t8-GYa"; */
+"p2F-t8-GYa.text" = "x:";
+
+/* Class = "UITabBarItem"; title = "Sensors"; ObjectID = "rmB-03-dPj"; */
+"rmB-03-dPj.title" = "Sensores";
+
+/* Class = "UINavigationItem"; title = "Smart Assistant History"; ObjectID = "ttG-p1-Nqa"; */
+"ttG-p1-Nqa.title" = "Historico Assistente Inteligente";
+
+/* Class = "UILabel"; text = "y:"; ObjectID = "u7z-lY-Fh6"; */
+"u7z-lY-Fh6.text" = "y:";
+
+/* Class = "UILabel"; text = "Waiting for watch to start"; ObjectID = "vGX-KC-pb4"; */
+"vGX-KC-pb4.text" = "Esperar pelo início do smartwatch";
+
+/* Class = "UILabel"; text = "Start research on Apple Watch."; ObjectID = "xRl-1q-5ZN"; */
+"xRl-1q-5ZN.text" = "Começar exercício no smartwatch.";
+
+/* Class = "UILabel"; text = "z:"; ObjectID = "yHq-vy-UiE"; */
+"yHq-vy-UiE.text" = "z:";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "yia-Zy-OrI"; */
+"yia-Zy-OrI.normalTitle" = "Reiniciar";
+
+/* Class = "UINavigationItem"; title = "Smart Assistant History"; ObjectID = "zvn-Fy-Glg"; */
+"zvn-Fy-Glg.title" = "Histórico do Assistente Inteligente";
